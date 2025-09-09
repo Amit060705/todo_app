@@ -1,4 +1,4 @@
-const backend_url="http://localhost:3000";
+const backend_url="https://todo-app-97q5.onrender.com";
 let isSigningUp = false
 let isAddingTodo = false
 //  signup from submission
