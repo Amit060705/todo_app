@@ -1,3 +1,7 @@
+const dotenv = require("dotenv");
+const axios=require("axios");
+dotenv.config();
+axios.defaults.baseURL=process.env.backend_url;
 let isSigningUp = false
 let isAddingTodo = false
 //  signup from submission
@@ -20,7 +24,7 @@ signupBtn.addEventListener("click", async () => {
         return;
     }
     try {
-        const response = await axios.post("http://localhost:3000/user/signup", {
+        const response = await axios.post("/user/signup", {
             username,
             password
         })
@@ -58,7 +62,7 @@ loginBtn.addEventListener("click", async () => {
         return;
     }
     try {
-        const response = await axios.post("http://localhost:3000/user/login", {
+        const response = await axios.post("/user/login", {
             username,
             password
         })
@@ -101,7 +105,7 @@ addTodoButton.addEventListener('click', async () => {
     }
     const token = localStorage.getItem('token');
     try {
-        await axios.post("http://localhost:3000/todo",
+        await axios.post("/todo",
             { title: todoText },
             {
                 headers: {
@@ -121,7 +125,7 @@ addTodoButton.addEventListener('click', async () => {
 async function loadTodos() {
     const token = localStorage.getItem('token');
     try {
-        const response = await axios.get("http://localhost:3000/todo", {
+        const response = await axios.get("/todo", {
             headers: {
                 Authorization: token
             }
@@ -148,7 +152,7 @@ async function loadTodos() {
 async function completeTodo(id, done) {
     const token = localStorage.getItem('token');
     try {
-        await axios.put(`http://localhost:3000/todo/${id}`,
+        await axios.put(`/todo/${id}`,
             { done },
             {
                 headers: {
