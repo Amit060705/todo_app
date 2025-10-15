@@ -160,7 +160,6 @@ async function loadTodos() {
 //deleting todo logic
 async function deleteTodo(id) {
     const token = localStorage.getItem('token');
-    console.log(token);
     try {
         await axios.delete(`${backend_url}/todo/${id}`,
             {
