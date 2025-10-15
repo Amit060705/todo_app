@@ -1,0 +1,147 @@
+  /* start from here */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: rgb(196, 129, 255);
+    font-family: Arial, sans-serif;
+    color: rgb(122, 51, 252);
+    font-size: 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .box {
+    width: 35vw;
+    height: 50vh;
+    background-color: rgb(211, 152, 255);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;  
+    padding: 35px;
+  }
+  /* #todo-continer .box{
+    max-height:50vh;
+  } */
+
+  .login {
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    font-size: 25px;
+  }
+  .logout {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    color: yellow;
+  }
+
+  .signup_btn input {
+    border-style: none;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(122, 51, 252);
+    color: white;
+    font-size: 20px;
+  }
+  .login_btn input {
+    border-style: none;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(122, 51, 252);
+    color: white;
+    font-size: 20px;
+  }
+
+  .password input {
+    border-style: none;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin-top: 5px;
+  }
+
+  .username input {
+    border-style: none;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin-top: 5px;
+  }
+  #signtext{
+    color: yellow;
+    cursor: pointer;
+  }
+  .signup{
+    width: 30vw;
+  }
+  .login{
+    width:30vw;
+  }
+  .todoHead{
+    width: 30vw;
+  }
+  .todo_btn input{
+    border-style: none;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(122, 51, 252);
+    color: white;
+    font-size: 20px;
+  }
+  .todo_input input{
+    border-style: none;
+    width: 30vw;
+    height: 5vh;
+    border-radius: 10px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin-top: 5px;
+    background-color: rgb(223, 181, 255);
+  }
+  .todo_input input::placeholder{
+    color: rgb(255, 221, 221);
+  }
+  .todo_container div{
+    width: 30vw;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: rgb(223, 181, 255);
+    font-size: 25px;
+    padding-left: 10px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+   .todo_container{
+    max-height: 16vh;
+    overflow-y: auto;
+    width: 30vw;
+   }
+   .todo_container::-webkit-scrollbar{
+    display: none;
+   }
+   .todo_container div{
+    cursor: pointer;
+   }

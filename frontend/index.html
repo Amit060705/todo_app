@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify Frontend</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- signup -->
+    <div class="container" id="signup-container">
+        <div class="box">
+            <div class="signup">
+                <h2>Signup</h2>
+            </div>
+            <div class="username">
+                <div>Username:</div>
+                <div><input type="text" placeholder="Enter username" name="" id="signup-username"></div>
+            </div>
+            <div class="password">
+                <div>Password:</div>
+                <div><input type="password" placeholder="Enter password" name="" id="signup-password"></div>
+            </div>
+            <div class="signup_btn">
+                <input type="button" id="signup-button" value="Signup">
+            </div>
+            <div class="login">
+                <div>Already have an account?</div>
+                <div id="signtext"><a href="#" id="show-login">Login</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- login -->
+    <div class="container" id="login-container" style="display: none;">
+        <div class="box">
+            <div class="login">
+                <h2>Login</h2>
+            </div>
+            <div class="username">
+                <div>Username:</div>
+                <div><input type="text" placeholder="Enter username" name="" id="login-username"></div>
+            </div>
+            <div class="password">
+                <div>Password:</div>
+                <div><input type="password" placeholder="Enter password" name="" id="login-password"></div>
+            </div>
+            <div class="login_btn">
+                <input type="button" id="login-button" value="Login">
+            </div>
+            <div class="login">
+                <div>Don't have an account?</div>
+                <div id="signtext"><a href="#" id="show-signup">Signup</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- login -->
+    <div class="container" id="todo-container" style="display: none;">
+        <div class="box">
+            <div class="todoHead">
+                <h2>Your Todo List</h2>
+            </div>
+            <div class="todo_input">
+                <input type="text" placeholder="Add a new todo" name="" id="todo-input">
+            </div>
+            <div class="todo_btn">
+                <input type="button" id="add-button" value="Add Todo">
+            </div>
+            <div class="todo_container" id="todo-list">
+
+            </div>
+            <div class="logout">
+                <div>Logged in successfully.</div>
+                <div style="cursor: pointer;" id="logout-button">Logout</div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
