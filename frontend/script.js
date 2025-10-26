@@ -157,7 +157,7 @@ async function loadTodos() {
         console.log('error loading todos:', error);
     }
 }
-//deleting todo logic
+//deleting todo logic   
 async function deleteTodo(id) {
     const token = localStorage.getItem('token');
     try {
