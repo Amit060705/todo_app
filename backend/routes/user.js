@@ -80,7 +80,7 @@ router.post('/login', async (req, res) => {
             username
         })
         if (!user) {
-            return res.json({
+            return res.status(401).json({
                 message: "User does not exist in our database"
             })
         }
