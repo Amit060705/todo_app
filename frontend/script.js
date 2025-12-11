@@ -189,6 +189,26 @@ async function completeTodo(id, done) {
         console.log('error completing todos:', error);
     }
 }
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+
+        // Signup active?
+        if (document.getElementById("signup-container").style.display !== "none") {
+            document.getElementById("signup-button").click();
+        }
+
+        // Login active?
+        else if (document.getElementById("login-container").style.display !== "none") {
+            document.getElementById("login-button").click();
+        }
+
+        // Todo active?
+        else if (document.getElementById("todo-container").style.display !== "none") {
+            document.getElementById("add-button").click();
+        }
+    }
+});
+
 //Toggle between signup and login
 document.getElementById('show-login').addEventListener('click', () => {
     document.getElementById('signup-container').style.display = 'none';
