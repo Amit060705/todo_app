@@ -1,13 +1,53 @@
   /* start from here */
-  *{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
+  /* -- Video background wrapper (fixed, behind everything) -- */
+  .video-wrap {
+    position: fixed;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0; */
+    z-index: -2;
+    /* behind page content */
+    overflow: hidden;
+    pointer-events: none;
+    /* allow clicking inputs */
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    /* crop to fill the screen */
+    will-change: transform;
+    filter: blur(10px);
+    -webkit-filter: blur(2px);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    /* tweak for contrast */
+    z-index: -1;
+    /* sits above video, behind content */
+    pointer-events: none;
+  }
+
   body {
     background-color: rgb(196, 129, 255);
     font-family: Arial, sans-serif;
-    color: rgb(122, 51, 252);
+    color: black;
     font-size: 30px;
   }
 
@@ -26,9 +66,13 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
     padding: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    /* 20% visible, 80% transparent */
+    backdrop-filter: blur(15px);
   }
+
   /* #todo-continer .box{
     max-height:50vh;
   } */
@@ -39,6 +83,7 @@
     width: 30vw;
     font-size: 25px;
   }
+
   .logout {
     display: flex;
     flex-direction: row;
@@ -52,17 +97,18 @@
     height: 5vh;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgb(122, 51, 252);
+    background-color: black;
     color: white;
     font-size: 20px;
   }
+
   .login_btn input {
     border-style: none;
     width: 30vw;
     height: 5vh;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgb(122, 51, 252);
+    background-color: black;
     color: white;
     font-size: 20px;
   }
@@ -86,30 +132,36 @@
     padding-left: 10px;
     margin-top: 5px;
   }
-  #signtext{
+
+  #signtext {
     color: yellow;
     cursor: pointer;
   }
-  .signup{
+
+  .signup {
     width: 30vw;
   }
-  .login{
-    width:30vw;
-  }
-  .todoHead{
+
+  .login {
     width: 30vw;
   }
-  .todo_btn input{
+
+  .todoHead {
+    width: 30vw;
+  }
+
+  .todo_btn input {
     border-style: none;
     width: 30vw;
     height: 5vh;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgb(122, 51, 252);
+    background-color: black;
     color: white;
     font-size: 20px;
   }
-  .todo_input input{
+
+  .todo_input input {
     border-style: none;
     width: 30vw;
     height: 5vh;
@@ -119,10 +171,12 @@
     margin-top: 5px;
     background-color: rgb(223, 181, 255);
   }
-  .todo_input input::placeholder{
+
+  .todo_input input::placeholder {
     color: rgb(255, 221, 221);
   }
-  .todo_container div{
+
+  .todo_container div {
     width: 30vw;
     height: 5vh;
     border-radius: 10px;
@@ -134,14 +188,17 @@
     align-items: center;
     margin-bottom: 15px;
   }
-   .todo_container{
+
+  .todo_container {
     max-height: 16vh;
     overflow-y: auto;
     width: 30vw;
-   }
-   .todo_container::-webkit-scrollbar{
+  }
+
+  .todo_container::-webkit-scrollbar {
     display: none;
-   }
-   .todo_container div{
+  }
+
+  .todo_container div {
     cursor: pointer;
-   }
+  }
