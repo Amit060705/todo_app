@@ -172,9 +172,6 @@
     background-color: white;
   }
 
-  .todo_input input::placeholder {
-    color: rgb(255, 221, 221);
-  }
 
   .todo_container div {
     width: 30vw;
